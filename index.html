@@ -1,87 +1,226 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>My Profile Site</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Robert Florea — BSc Computer Science graduate. Front-end developer focused on accessibility, usability and clean code." />
+  <title>Robert Florea — Developer</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Welcome to my Profile Site</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#interests">Technical Interests</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#project_description">Project details</a></li>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#main-content" class="nav-brand">Robert Florea</a>
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="Toggle navigation menu"
+      >Menu</button>
+      <ul id="nav-menu" class="nav-menu" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <section class="hero" aria-label="Introduction">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Hi, I'm</p>
+          <h1 class="hero-name">Robert Florea</h1>
+          <p class="hero-title">BSc (Hons) Computer Science Graduate</p>
+          <p class="hero-description">
+            Front-end developer with an interest in accessibility, usability,
+            and building things that work well for everyone.
+          </p>
+          <div class="hero-links">
+            <a
+              href="https://github.com/rovative"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub<span class="sr-only"> (opens in new tab)</span></a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="images/profile.png" alt="" class="profile-img" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a BSc (Hons) Computer Science graduate from the University of Hertfordshire,
+              with a focus on front-end development, accessibility, and building clean, usable interfaces.
+            </p>
+            <p>
+              My main personal project is
+              <a
+                href="https://github.com/rovative/creatorflow-app"
+                class="inline-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >CreatorFlow<span class="sr-only"> (opens in new tab)</span></a>
+              — a full-stack social media scheduling web app built with Next.js, React, TypeScript,
+              and Supabase.
+            </p>
+            <p>
+              I care about writing code that works properly: semantic HTML, real keyboard navigation,
+              sufficient colour contrast, and layouts that hold together across screen sizes and devices.
+            </p>
+          </div>
+          <div class="skills-block">
+            <h3 class="skills-heading">Skills &amp; Interests</h3>
+            <ul class="skill-tags" role="list">
+              <li>HTML5 &amp; CSS3</li>
+              <li>JavaScript</li>
+              <li>React / Next.js</li>
+              <li>TypeScript</li>
+              <li>Node.js</li>
+              <li>Accessibility (WCAG)</li>
+              <li>Responsive Design</li>
+              <li>Git &amp; GitHub</li>
             </ul>
-        </nav>
-    </header>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-container">
-                <img src="images/profile.png" alt="Profile Picture Of Robert Florea">
-                <div class="about-text">
-                    <p>Name: Robert Florea</p>
-                    <p>Year: 3rd Year</p>
-                    <p>Award: BSc Computer Science</p>
-                    <h3>Hi, im Robert Florea</h3>
-                    <p>I'm a 3rd year BSc Computer Science student with a passion for improving my skills and learning new technologies</p>
+    <section id="projects" class="section section--alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">
+          University work demonstrating front-end fundamentals and accessible design.
+        </p>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/weather.png" alt="The weather app interface showing a city search field and weather results" />
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Weather App</h3>
+              <p class="project-desc">
+                A vanilla JavaScript app that fetches live weather data by city name using
+                a public API, displaying temperature, conditions, and icons.
+              </p>
+              <details class="project-details">
+                <summary class="project-details-toggle">More details</summary>
+                <div class="project-details-body">
+                  <p>
+                    Built as part of my university coursework, this project demonstrates consuming
+                    a REST API with vanilla JS, handling asynchronous requests with
+                    <code>fetch</code>, and presenting data in a clear, readable format.
+                    The interface is intentionally simple — quick to understand and use.
+                  </p>
                 </div>
+              </details>
+              <div class="project-links">
+                <a
+                  href="https://github.com/rf23aam/weather-app"
+                  class="btn btn-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >View on GitHub<span class="sr-only"> (opens in new tab)</span></a>
+              </div>
             </div>
-        </section>
+          </article>
 
-        <section id="interests">
-            <h2>Technical Interests</h2>
-            <div class="interests-container">
-                <img src="images/programming.jpg" alt="programming implied by a illustration of a laptop" width="150">
-                <div class="interests-text">
-                    <h3>Programming</h3>
-                    <p>
-                        I am passionate about programming and enjoy creating both useful tools and fun projects.
-                        i enjoy experimenting with new ideas, solving problems through code, and exploring creating ways to create interactive applications.
-                    </p>
-                    <p>
-                        My interests include web development, game design, and learning new programming languages and frameworks.
-                        Whether its building a small game or crafting a web app, i find joy in bringing ideas to life with code.
-                    </p>
-                    </div>
+          <article class="project-card">
+            <div class="project-image">
+              <img src="images/BMI.PNG" alt="The BMI and water tracking calculator interface with input fields and results" />
             </div>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            
-            <div class="portfolio-item">
-                <img src="images/weather.png" alt="Illustration of weather with sun">
-                <div class="portfolio-text">
-                    <h3>Weather App</h3>
-                    <p>This weather app lets users check live weather data by entering a city name. It uses a public API and displays temperature, conditions, and icons</p>
-                    <button onclick="showProjectDetails('weather-app')">View Details</button>
+            <div class="project-body">
+              <h3 class="project-title">BMI &amp; Water Tracker</h3>
+              <p class="project-desc">
+                A health utility tool that calculates Body Mass Index and estimates
+                daily water intake recommendations based on weight and activity level.
+              </p>
+              <details class="project-details">
+                <summary class="project-details-toggle">More details</summary>
+                <div class="project-details-body">
+                  <p>
+                    Another university project combining two related health calculators
+                    into one interface. Demonstrates form handling, real-time DOM updates,
+                    and presenting results with visual category feedback — all in vanilla JS.
+                  </p>
                 </div>
+              </details>
+              <div class="project-links">
+                <a
+                  href="https://github.com/rf23aam/BMI-Calculator"
+                  class="btn btn-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >View on GitHub<span class="sr-only"> (opens in new tab)</span></a>
+              </div>
             </div>
+          </article>
 
-            <div class="portfolio-item">
-                <img src="images/BMI.PNG" alt="Illustration of gym equitment">
-                <div class="portfolio-text">
-                    <h3>BMI Calculator</h3>
-                    <p>This BMI calculator takes height and weight inputs and calculates the user's Body Mass Index, providing health category feedback.</p>
-                    <button onclick="showProjectDetails('BMI-Calculator')">View Details</button>
-                </div>
-            </div>
-        </section>
-        <section id="project_description">
-            <h2>Project Description</h2>
-            <p>Click on a project above to see details here.</p>
-        </section>
-    </main>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Robert Florea</p>
-    </footer>
+        <aside class="callout" aria-label="Main project">
+          <div class="callout-text">
+            <p class="callout-label">Main personal project</p>
+            <p class="callout-desc">
+              <strong>CreatorFlow</strong> — a full-stack social media scheduling app.
+              Next.js · React · TypeScript · Supabase · TikTok &amp; YouTube APIs.
+            </p>
+          </div>
+          <a
+            href="https://github.com/rovative/creatorflow-app"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View on GitHub<span class="sr-only"> (opens in new tab)</span></a>
+        </aside>
 
-    <script src="script.js"></script>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container container--narrow">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Find me on GitHub.</p>
+        <div class="contact-links">
+          <a
+            href="https://github.com/rovative"
+            class="contact-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" focusable="false">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            github.com/rovative
+            <span class="sr-only">(opens in new tab)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Robert Florea</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
